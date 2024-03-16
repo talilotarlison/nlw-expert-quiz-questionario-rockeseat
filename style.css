@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* , :root {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  background-color: #0F172A;
+  color: #f1f5f9;
+}
+
+main{
+  max-width: 650px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+
+header {
+  margin-top: 34px;
+  border-bottom: 1px solid #334155;
+}
+
+h1{
+  font-size: xx-large;
+}
+
+h2{
+  margin: 0;
+  font-size: medium;
+}
+
+dl{
+  border: 1px solid #475569;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+dt{
+  margin: 0;
+  background-color: #1e293B;
+  padding: 15px;
+}
+
+dd{
+  padding: 5px 15px;
+  margin: 0 ;
+  background-color: #475569;
+  font-size: 14px ;
+}
+
+#resultado{
+  text-align: center;
+  background-color: #A3E635;
+  color: black;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+
+}
+
+#quiz-questoes {
+  counter-reset: quiz;
+}
+.quiz > dt > h2{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.quiz > dt > h2::before {
+  counter-increment: quiz;
+  content: counter(quiz);
+
+  background-color: #475569;
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  
+}
